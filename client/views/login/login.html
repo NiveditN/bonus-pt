@@ -1,0 +1,68 @@
+<ion-view view-title="Login">
+
+	<ion-nav-bar class="bar-stable">
+	</ion-nav-bar>
+
+    <ion-content has-bouncing="true">
+
+    	<!-- App Name -->
+    	<div class="row">
+			<div class="col">
+				<div class="text-center">
+					<h4>BonusPoint</h4>
+					Gifts and more!
+				</div>
+			</div>
+		</div>
+
+		<!-- Login Form -->
+		<div class="row">
+			<div class="col">
+				<div>
+					<div class="list">
+						<label class="item item-input item-floating-label">
+							<span class="input-label">Email</span>
+							<input type="text" ng-model="logger.email" placeholder="Email">
+						</label>
+						<label class="item item-input item-floating-label">
+							<span class="input-label">Password</span>
+							<input type="password" ng-model="logger.password" placeholder="Password">
+						</label>
+					</div>
+
+					<div>
+						<button ng-click="logger.login()" class="button button-block button-positive">
+							Login
+						</button>
+
+						<div class="text-center">
+							<a href="#/login"> Forgot password </a>	
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Signup Link -->
+		<div class="row">
+			<div class="col">
+				<div>	
+					<div class="text-center">
+						Not a user? 
+						Register and start issuing membership cards in a few minutes!
+					</div>
+					<div>
+						<button ui-sref="signup" class="button button-block button-royal">
+							Sign Up
+						</button>
+					</div>
+					<div class="text-center">
+						
+					</div>			
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>
