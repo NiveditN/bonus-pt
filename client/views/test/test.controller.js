@@ -4,12 +4,12 @@ function TestCtrl($scope, $reactive, $state, $stateParams, $ionicLoading, $ionic
 	$cordovaBarcodeScanner, $ionicGesture, $timeout, History, testService, $rootScope) {
 
 	$reactive(this).attach($scope);
-
-	//////////////////  SUBSCRIPTIONS  //////////////////
-
+	
+	//////////////////  VARIABLES  //////////////////	
 	this.card = {};
 	this.cardModel = {};
-
+	
+	//////////////////  SUBSCRIPTIONS  //////////////////
 	this.subscribe('cards', () => [], {
 		onReady: function() {
 			// console.log('CARDS READY')
@@ -20,31 +20,13 @@ function TestCtrl($scope, $reactive, $state, $stateParams, $ionicLoading, $ionic
 			// console.log('CARD MODELS READY')
 		}
 	});
-
 	this.autorun(() => {
+		//////////////////  CARD  //////////////////
 		this.card = Cards.findOne();
+		//////////////////  CARD MODEL  //////////////////
 		this.cardModel = CardModels.findOne();	
 	});
-
 	//////////////////  SUBSCRIPTIONS  //////////////////
-
-	//////////////////  CARD  //////////////////
-
-	this.cardFront = true;
-	this.flipCard = flipCard;
-	function flipCard() {
-		this.cardFront = !(this.cardFront);
-	}
-
-	//////////////////  CARD MODEL  //////////////////
-
-	this.cardModelFront = true;
-	this.flipModel = flipModel;
-	function flipModel() {
-		this.cardModelFront = !(this.cardModelFront);
-	}
-
-	// border:2px solid blue; padding: 100px; background-color: lightblue
 
 	//////////////////  FLIP + SWIPE  //////////////////
 

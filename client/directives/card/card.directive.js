@@ -2,8 +2,7 @@ angular.module('bonuspoint').directive('card', function() {
 	return {
 		restrict: 'E',
 		scope: {
-			card: '=',
-			activeSide: '='
+			card: '='
 		},
 		templateUrl: 'client/directives/card/card.html',
 		controller: ['$scope', function($scope) {

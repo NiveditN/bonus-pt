@@ -14,13 +14,9 @@
 			<div class="item item-divider"> 
 				Card
 			</div>	
-			<div class="item item-text-wrap">
-				<button class="button button-outline button-dark" ng-click="test.flipCard()">Flip</button>	
-				{{test.cardFront}}
-			</div>
-			<div style="height:350px; margin: 10px;">
+			<div class="card-tpl" style="margin-top: 30px">
 				<div>
-					<card card="test.card" active-side="test.cardFront"></card>
+					<card card="test.card"></card>
 				</div>				
 			</div>			
 		</div>
@@ -30,13 +26,9 @@
 			<div class="item item-divider"> 
 				Card Model
 			</div>	
-			<div class="item item-text-wrap">
-				<button class="button button-outline button-dark" ng-click="test.flipModel()">Flip</button>	
-				{{test.cardModelFront}}
-			</div>
-			<div style="height:350px; margin: 10px;">
+			<div class="card-tpl" style="margin-top: 30px">
 				<div>
-					<card-model model="test.cardModel" active-side="test.cardModelFront"></card-model>
+					<card-model model="test.cardModel"></card-model>
 				</div>				
 			</div>			
 		</div>
